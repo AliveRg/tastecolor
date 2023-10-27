@@ -16,14 +16,23 @@ function onIntersectionObserver([{ isIntersecting }]: any) {
     v-intersection-observer="onIntersectionObserver"
   >
     <div
-      class="text_inner transitionSettingLight relative z-10 max-w-[405px] scale-75 text-[#fff] opacity-0 group-hover:scale-100 group-hover:opacity-100"
+      class="text_inner transitionSettingLight relative z-10 max-w-[405px] scale-75 text-[#fff] opacity-0 group-hover:scale-100 group-hover:opacity-100 flex flex-col gap-[78px]"
     >
-      <p>Новая коллекция пуховиков этой зимой!</p>
-      <p>
-        Выбери свой стиль и присоединяйся к семье «TASTE&COLOR»! Неповторимы дизайн и эргономика,
-        превосходящая воображение
-      </p>
-      <p>Присмотреться к коллекции</p>
+      <div class="main_text flex w-full items-start text-[32px]">
+        <p class="font-semibold">Новая коллекция пуховиков этой зимой!</p>
+      </div>
+      <div class="main-text text-[24px] flex w-full items-center ml-[100px]">
+        <p>
+          Выбери свой стиль и присоединяйся к семье «TASTE&COLOR»! Неповторимы дизайн и эргономика,
+          превосходящая воображение
+        </p>
+      </div>
+      <div
+        class="main-text text-[24px] flex w-full items-center"
+        style="text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.74)"
+      >
+        <p>Присмотреться к коллекции</p>
+      </div>
     </div>
     <div
       class="inner_img absolute left-0 top-0 z-0 h-full w-full"
@@ -51,6 +60,14 @@ export default defineComponent({
 })
 </script>
 <style lang="scss">
+.main_text {
+  color: #fff;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
 .inner_img {
   z-index: 0;
   background-position: center;

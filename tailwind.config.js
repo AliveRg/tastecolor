@@ -1,6 +1,11 @@
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
+    extend: {
+      animation: {
+        'spin-slow': 'spin 3s linear infinite'
+      }
+    },
     screens: {
       sm: '320px',
       md: '608px',
@@ -23,7 +28,8 @@ export default {
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif']
+      serif: ['Merriweather', 'serif'],
+      monster: ['Monsterrat', 'serif']
     }
   },
   plugins: []
