@@ -29,7 +29,7 @@ export default {
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
-      monster: ['Monsterrat', 'serif']
+      monster: ['Monsterrat', 'sans-serif']
     }
   },
   plugins: []

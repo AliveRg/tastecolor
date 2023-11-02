@@ -3,8 +3,8 @@
     <section class="section_1 mb-[87px]">
       <div class="flex flex-col gap-[20px] overflow-hidden bg-black pt-[20px]">
         <div class="flex justify-between gap-[20px]">
-          <Collection :left="true" :img-path="'photo_2023-10-11 01.48.58.jpeg'"></Collection>
-          <Collection :right="true" :img-path="'photo_2023-10-11 04.54.00.jpeg'"></Collection>
+          <Collection :left="true" :img-path="'photo_2023-10-11 01.48.58.png'"></Collection>
+          <Collection :right="true" :img-path="'photo_2023-10-11 04.54.00.png'"></Collection>
         </div>
       </div>
       <div class="w-screen">
@@ -15,8 +15,8 @@
       </div>
 
       <div class="flex justify-between gap-[20px] overflow-hidden bg-black">
-        <Collection :left="true" :img-path="'photo_2023-10-11 05.08.29.jpeg'"></Collection>
-        <Collection :right="true" :img-path="'photo_2023-10-11 05.28.19.jpeg'"></Collection>
+        <Collection :left="true" :img-path="'photo_2023-10-11 05.08.29.png'"></Collection>
+        <Collection :right="true" :img-path="'photo_2023-10-11 05.28.19.png'"></Collection>
       </div>
     </section>
     <section class="section_2 mx-auto mb-[150px] flex flex-col gap-[120px] xl:max-w-[1196px]">
@@ -97,7 +97,7 @@
             <div class="not_main_text group/buybtn">
               <p class="text-[48px]">Cales <span class="text-[64px]">&</span></p>
               <div
-                class="transitionSetting flex min-h-[442px] rounded-[25px] bg-black group-hover/buybtn:bg-wight p-[11px] text-[48px]"
+                class="transitionSetting group-hover/buybtn:bg-wight flex min-h-[442px] rounded-[25px] bg-black p-[11px] text-[48px]"
               >
                 <p
                   class="text-wight group-hover/buybtn:text-black"
@@ -107,7 +107,7 @@
                 </p>
                 <div class="flex flex-col justify-between">
                   <p
-                    class="transitionSetting bg-wight group-hover/buybtn:bg-black group-hover/buybtn:text-wight w-min rotate-180 rounded-[55px] px-[24px] py-[43px] group-hover/buybtn:scale-105"
+                    class="transitionSetting bg-wight group-hover/buybtn:text-wight w-min rotate-180 rounded-[55px] px-[24px] py-[43px] group-hover/buybtn:scale-105 group-hover/buybtn:bg-black"
                     style="writing-mode: vertical-lr; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)"
                   >
                     buy now
@@ -123,7 +123,7 @@
                 <img
                   class="transitionSetting absolute -z-10 animate-[spin_2s_ease-in-out_forwards]"
                   :class="{ grayscale: grayscale }"
-                  src="@/images/vinil.webp"
+                  src="@/images/vinil.png"
                   alt=""
                 />
                 <img
@@ -172,13 +172,13 @@
           @mouseenter="rotateEnter()"
           @mouseleave="rotateLeave()"
         >
-          <div class="w-[176px] rounded-lg grid grid-cols-4 grid-rows-2 gap-y-[10px]">
-            <div class="w-full h-[10px] bg-[#F3A352] rounded-l-md"></div>
-            <div class="w-full h-[10px] bg-[#F3D3AF]"></div>
-            <div class="w-full h-[10px] bg-[#B14F4F]"></div>
-            <div class="w-full h-[10px] bg-[#FD865E] rounded-r-md"></div>
+          <div class="grid w-[176px] grid-cols-4 grid-rows-2 gap-y-[10px] rounded-lg">
+            <div class="h-[10px] w-full rounded-l-md bg-[#F3A352]"></div>
+            <div class="h-[10px] w-full bg-[#F3D3AF]"></div>
+            <div class="h-[10px] w-full bg-[#B14F4F]"></div>
+            <div class="h-[10px] w-full rounded-r-md bg-[#FD865E]"></div>
             <div
-              class="w-full h-[10px] bg-black rounded-md transitionSetting"
+              class="transitionSetting h-[10px] w-full rounded-md bg-black"
               :class="{
                 'col-start-1 col-end-1': activeItem == 0,
                 'col-start-2 col-end-2': activeItem == 1,
@@ -222,6 +222,93 @@
         </div>
       </div>
     </section>
+    <section class="section_4">
+      <div class="relative">
+        <div class="absolute -top-2/3 left-0 right-0 -z-20">
+          <img class="w-full" src="@/images/geers.png" alt="" />
+        </div>
+        <div
+          class="lg:max-w-[840px relative z-10 mx-auto sm:max-w-[320px] sm:px-[5px] md:max-w-[608px] md:px-[20px] xl:max-w-[1236px]"
+        >
+          <div
+            class="relative flex h-[877px] w-full justify-end rounded-[31px] bg-[#617d5f30] backdrop-blur-md"
+          >
+            <p
+              class="uppercase font-monster font-bold text-[64px] text-[#b4c1af] absolute left-[5%] top-1/4 z-20"
+              style="line-height: 138.023%; /* 88.335px */ letter-spacing: 18.56px"
+            >
+              TASTE & <br />
+              color
+            </p>
+            <div class="absolute left-1/2 top-1/2 z-10 -translate-x-[60%] -translate-y-1/2">
+              <img class="w-[567px]" src="@/images/sweet.png" alt="" />
+            </div>
+            <div
+              class="flex h-full w-[414px] items-start justify-center rounded-r-[31px] bg-[#374D358F] pt-[155px] backdrop-blur-[13px]"
+            >
+              <div
+                class="font-monster flex flex-col items-center justify-center gap-24 not-italic text-black"
+              >
+                <div class="flex flex-col justify-center gap-[26px] text-[40px] tracking-[11px]">
+                  <p class="text-center font-bold">stevelock</p>
+                  <div class="grid w-[322px] grid-cols-4 rounded-lg">
+                    <div class="h-[10px] w-full rounded-l-md bg-[#F3A352]"></div>
+                    <div class="h-[10px] w-full bg-[#F3D3AF]"></div>
+                    <div class="h-[10px] w-full bg-[#B14F4F]"></div>
+                    <div class="h-[10px] w-full rounded-r-md bg-[#FD865E]"></div>
+                  </div>
+                </div>
+                <div class="text-wight flex gap-[37px] text-[24px] uppercase">
+                  <div
+                    v-for="item in size"
+                    class="transitionSetting flex h-[48px] w-[48px] items-center justify-center rounded-full border-[1px] border-solid border-black hover:bg-wight hover:text-black cursor-pointer"
+                  >
+                    <p>{{ item }}</p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-center">
+                  <div
+                    class="font-monster text-wight flex flex-col items-start gap-[51px] text-[24px] tracking-[6px]"
+                  >
+                    <div class="flex flex-col gap-[27px]">
+                      <p class="">Рукава</p>
+                      <div class="flex items-center justify-center gap-3">
+                        <input type="range" max="80" min="35" step="1" v-model="newItem2" />
+                        <p
+                          class="text-wight font-monster text-[24px] font-medium"
+                          style="line-height: 74.523%; /* 17.885px */ letter-spacing: -0.48px"
+                        >
+                          {{ newItem2 }} см
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-[27px]">
+                      <p class="">Торс</p>
+                      <div class="flex items-center justify-center gap-3">
+                        <input type="range" max="93" min="32" step="1" v-model="newItem" />
+                        <p
+                          class="text-wight font-monster text-[24px] font-medium"
+                          style="line-height: 74.523%; /* 17.885px */ letter-spacing: -0.48px"
+                        >
+                          {{ newItem }} см
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="transitionSetting w-[233px] bg-wight self-center text-black text-center flex items-center justify-center rounded-lg hover:bg-black hover:text-wight"
+                    >
+                      <p class="font-bold" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
+                        make a reservation
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -232,12 +319,15 @@ import CardInfo from '@/components/CardInfoComponent.vue'
 export default defineComponent({
   data() {
     return {
-      activeImg: 'first',
+      activeImg: 'first' as 'first' | 'second' | 'thrih',
       activeItem: 0,
       videoPause: false,
       currentTimeVideo: 0,
       ratateActive: false,
       grayscale: true,
+      newItem: '68',
+      newItem2: '50',
+      size: ['s', 'm', 'l', 'xl'],
       cross: [
         {
           id: 0,
@@ -312,7 +402,7 @@ export default defineComponent({
 
       setTimeout(() => {
         this.grayscaleActive()
-      }, 2000)
+      }, 1700)
     }
   },
   methods: {
@@ -325,6 +415,7 @@ export default defineComponent({
         if ((element.active = true)) {
           element.active = false
           element.rotate = true
+          this.activeImg = 'first'
         }
       }
 
@@ -350,15 +441,12 @@ export default defineComponent({
     switchColor(color: Number) {
       if (color == 1) {
         this.activeImg = 'first'
-        console.log(this.activeImg)
       }
       if (color == 2) {
         this.activeImg = 'second'
-        console.log(this.activeImg)
       }
       if (color == 3) {
         this.activeImg = 'thrih'
-        console.log(this.activeImg)
       }
     },
     rotateLeave() {
@@ -407,6 +495,27 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+input[type='range'] {
+  -webkit-appearance: none;
+  background: #ae2929;
+  height: 2px;
+  width: 208px;
+  border-radius: 2px;
+}
+
+/***** Thumb Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  background-color: #9c2424;
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
 .main_text {
   color: #332f2d;
   font-family: Montserrat;
@@ -446,6 +555,7 @@ export default defineComponent({
 .transitionSetting {
   transition: all 0.3s ease-out;
 }
+
 .transitionSettingStrong {
   transition: all 0.3s ease-out;
 }
