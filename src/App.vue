@@ -91,13 +91,15 @@ import { RouterLink, RouterView } from 'vue-router'
               </div>
             </div>
             <div class="flex items-center justify-center text-center uppercase">
-              <p
-                class="text-link_footer_2 transitionSetting bg-wight h-[83px] w-[83px] rounded-[30px] self-center text-black text-center flex items-center justify-center hover:bg-black hover:text-wight font-bold py-[20px]"
-                style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)"
-              >
-                up <br />
-                site
-              </p>
+              <a href="#">
+                <p
+                  class="text-link_footer_2 transitionSetting bg-wight h-[83px] w-[83px] rounded-[30px] self-center text-black text-center flex items-center justify-center hover:bg-black hover:text-wight font-bold py-[20px]"
+                  style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)"
+                >
+                  up <br />
+                  site
+                </p>
+              </a>
             </div>
           </div>
           <div

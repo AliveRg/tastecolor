@@ -3,8 +3,30 @@
     <section class="section_1 mb-[87px]">
       <div class="flex flex-col gap-[20px] overflow-hidden bg-black pt-[20px]">
         <div class="flex flex-col md:flex-row justify-between gap-[20px] overflow-hidden">
-          <Collection :left="true" :img-path="'photo_2023-10-11 01.48.58.png'"></Collection>
-          <Collection :right="true" :img-path="'photo_2023-10-11 04.54.00.png'"></Collection>
+          <Collection
+            @click="openForm(4)"
+            :left="true"
+            :img-path="'photo_2023-10-11 01.48.58.png'"
+          ></Collection>
+          <div
+            :class="forms[4] ? 'block' : 'hidden'"
+            @click.self="openForm(4)"
+            class="fixed top-0 left-0 z-50 backdrop:blur-xl w-screen h-screen bg-black/30 flex items-center justify-center"
+          >
+            <Forms></Forms>
+          </div>
+          <Collection
+            @click="openForm(5)"
+            :right="true"
+            :img-path="'photo_2023-10-11 04.54.00.png'"
+          ></Collection>
+          <div
+            :class="forms[5] ? 'block' : 'hidden'"
+            @click.self="openForm(5)"
+            class="fixed top-0 left-0 z-50 backdrop:blur-xl w-screen h-screen bg-black/30 flex items-center justify-center"
+          >
+            <Forms></Forms>
+          </div>
         </div>
       </div>
       <div class="w-screen">
@@ -15,8 +37,30 @@
       </div>
 
       <div class="flex flex-col md:flex-row justify-between gap-[20px] bg-black overflow-hidden">
-        <Collection :left="true" :img-path="'photo_2023-10-11 05.08.29.png'"></Collection>
-        <Collection :right="true" :img-path="'photo_2023-10-11 05.28.19.png'"></Collection>
+        <Collection
+          @click="openForm(6)"
+          :left="true"
+          :img-path="'photo_2023-10-11 05.08.29.png'"
+        ></Collection>
+        <div
+          :class="forms[6] ? 'block' : 'hidden'"
+          @click.self="openForm(6)"
+          class="fixed top-0 left-0 z-50 backdrop:blur-xl w-screen h-screen bg-black/30 flex items-center justify-center"
+        >
+          <Forms></Forms>
+        </div>
+        <Collection
+          @click="openForm(7)"
+          :right="true"
+          :img-path="'photo_2023-10-11 05.28.19.png'"
+        ></Collection>
+        <div
+          :class="forms[7] ? 'block' : 'hidden'"
+          @click.self="openForm(7)"
+          class="fixed top-0 left-0 z-50 backdrop:blur-xl w-screen h-screen bg-black/30 flex items-center justify-center"
+        >
+          <Forms></Forms>
+        </div>
       </div>
     </section>
     <section
@@ -140,15 +184,24 @@
                   <p
                     class="transitionSetting hidden md:block bg-wight group-hover/buybtn:text-wight w-min rotate-180 rounded-[55px] px-[14px] py-[33px] lg:px-[24px] lg:py-[43px] group-hover/buybtn:scale-105 group-hover/buybtn:bg-black"
                     style="writing-mode: vertical-lr; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)"
+                    @click="openForm(cros.id)"
                   >
                     buy now
                   </p>
                   <p
                     class="transitionSetting h-fit md:hidden bg-wight group-hover/buybtn:text-wight w-fit rounded-[55px] px-[12px] py-[10px] group-hover/buybtn:scale-105 group-hover/buybtn:bg-black"
                     style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)"
+                    @click="openForm(cros.id)"
                   >
                     buy now
                   </p>
+                  <div
+                    :class="forms[cros.id] ? 'block' : 'hidden'"
+                    @click.self="openForm(cros.id)"
+                    class="fixed top-0 left-0 z-50 backdrop:blur-xl text-sm w-screen h-screen bg-black/30 flex items-center justify-center"
+                  >
+                    <Forms></Forms>
+                  </div>
                   <p
                     class="text-wight transitionSetting group-hover/buybtn:text-black text-center text-[20px] md:text-[38px]"
                   >
@@ -276,7 +329,7 @@
         </div>
       </div>
     </section>
-    <section class="section_4 xl:pb-[500px]">
+    <section class="section_4 xl:pb-[300px]">
       <div
         class="relative"
         style="
@@ -445,10 +498,21 @@
                     <div
                       class="transitionSetting w-[145px] md:w-[160px] lg:w-[233px] bg-wight text-[12px] md:text-[15px] lg:text-[16px] xl:text-[24px] self-center text-black text-center flex items-center justify-center rounded-lg hover:bg-black hover:text-wight"
                     >
-                      <p class="font-bold" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
+                      <p
+                        @click.self="openForm(8)"
+                        class="font-bold"
+                        style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)"
+                      >
                         make a reservation
                       </p>
                     </div>
+                  </div>
+                  <div
+                    :class="forms[8] ? 'block' : 'hidden'"
+                    @click.self="openForm(8)"
+                    class="fixed top-0 left-0 z-50 backdrop:blur-xl text-sm w-screen h-screen bg-black/30 flex items-center justify-center"
+                  >
+                    <Forms></Forms>
                   </div>
                 </div>
               </div>
@@ -515,17 +579,28 @@
                 </p>
               </div>
             </Transition>
-
+            <div
+              :class="forms[9] ? 'block' : 'hidden'"
+              @click.self="openForm(9)"
+              class="fixed top-0 left-0 z-50 backdrop:blur-xl text-sm w-screen h-screen bg-black/30 flex items-center justify-center"
+            >
+              <Forms></Forms>
+            </div>
             <div
               class="flex flex-col md:flex-row justify-center gap-[32px] md:-translate-x-[17%] lg:translate-x-0 font-monster text-wight lg:text-[20px] xl:text-[24px] tracking-[6px]"
             >
               <div
                 class="transitionSetting w-[158px] md:w-[233px] bg-wight self-center text-black text-center flex items-center justify-center rounded-lg hover:bg-black hover:text-wight"
               >
-                <p class="font-bold py-[20px]" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
+                <p
+                  @click.self="openForm(9)"
+                  class="font-bold py-[20px]"
+                  style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)"
+                >
                   TEST IT
                 </p>
               </div>
+
               <div class="flex item-center justify-center gap-[20px]">
                 <div
                   ref="prev2"
@@ -568,6 +643,7 @@
 import { ref, onMounted, defineComponent } from 'vue'
 import Collection from '@/components/CollectionComponent.vue'
 import CardInfo from '@/components/CardInfoComponent.vue'
+import Forms from '@/components/FormsOverlay.vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Scrollbar, Navigation } from 'swiper/modules'
 
@@ -655,6 +731,28 @@ export default defineComponent({
           active: false,
           rotate: true
         }
+      ],
+      forms: [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
       ]
     }
   },
@@ -706,6 +804,9 @@ export default defineComponent({
     }
   },
   methods: {
+    openForm(el: number) {
+      this.forms[el] = !this.forms[el]
+    },
     switchSize(id: number) {
       console.log(id)
 
@@ -818,7 +919,8 @@ export default defineComponent({
     Collection,
     CardInfo,
     Swiper,
-    SwiperSlide
+    SwiperSlide,
+    Forms
   }
 })
 </script>
