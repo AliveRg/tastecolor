@@ -30,6 +30,7 @@ function onIntersectionObserver([{ isIntersecting }]: any) {
         </p>
       </div>
       <div
+        @click="$emit('openForm')"
         class="main-text md:text-[15px] lg:text-[16px] xl:text-[24px] flex w-full items-center"
         style="text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.74)"
       >
@@ -56,8 +57,10 @@ export default defineComponent({
     left: Boolean,
     right: Boolean,
     imgPath: String,
-    linkPath: String
+    linkPath: String,
+    openForm: Number
   },
+
   setup() {}
 })
 </script>

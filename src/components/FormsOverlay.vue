@@ -1,6 +1,11 @@
 <template>
   <div class="p-8 rounded-lg shadow-lg bg-wight/90 max-w-md w-full">
-    <h1 class="text-2xl font-bold text-gray-800 mb-6">Contact Us</h1>
+    <div class="flex w-full justify-between items-center">
+      <h1 class="text-2xl font-bold text-gray-800 mb-6">{{ title }}</h1>
+      <div class="">
+        <img class="w-[100px]" :src="'../src/images/' + img" alt="" />
+      </div>
+    </div>
     <form ref="form" @submit.prevent="sendEmail">
       <div class="mb-4">
         <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
@@ -56,6 +61,10 @@ import emailjs from '@emailjs/browser'
 import { ref, onMounted, defineComponent } from 'vue'
 
 export default {
+  props: {
+    title: { type: String, default: 'Contact Us' },
+    img: { type: String, default: ' ' }
+  },
   methods: {
     sendEmail() {
       emailjs

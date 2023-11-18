@@ -4,28 +4,28 @@
       <div class="flex flex-col gap-[20px] overflow-hidden bg-black pt-[20px]">
         <div class="flex flex-col md:flex-row justify-between gap-[20px] overflow-hidden">
           <Collection
-            @click="openForm(4)"
+            @openForm="openForm(4)"
             :left="true"
             :img-path="'photo_2023-10-11 01.48.58.png'"
           ></Collection>
           <div
             :class="forms[4] ? 'block' : 'hidden'"
             @click.self="openForm(4)"
-            class="fixed top-0 left-0 z-50 backdrop:blur-xl w-screen h-screen bg-black/30 flex items-center justify-center"
+            class="fixed top-0 left-0 z-[100] backdrop:blur-xl w-screen h-screen bg-black/30 flex items-center justify-center"
           >
-            <Forms></Forms>
+            <Forms :title="'Получить прайс-лист'"></Forms>
           </div>
           <Collection
-            @click="openForm(5)"
+            @openForm="openForm(5)"
             :right="true"
             :img-path="'photo_2023-10-11 04.54.00.png'"
           ></Collection>
           <div
             :class="forms[5] ? 'block' : 'hidden'"
             @click.self="openForm(5)"
-            class="fixed top-0 left-0 z-50 backdrop:blur-xl w-screen h-screen bg-black/30 flex items-center justify-center"
+            class="fixed top-0 left-0 z-[100] backdrop:blur-xl w-screen h-screen bg-black/30 flex items-center justify-center"
           >
-            <Forms></Forms>
+            <Forms :title="'Получить прайс-лист'"></Forms>
           </div>
         </div>
       </div>
@@ -38,28 +38,28 @@
 
       <div class="flex flex-col md:flex-row justify-between gap-[20px] bg-black overflow-hidden">
         <Collection
-          @click="openForm(6)"
+          @openForm="openForm(6)"
           :left="true"
           :img-path="'photo_2023-10-11 05.08.29.png'"
         ></Collection>
         <div
           :class="forms[6] ? 'block' : 'hidden'"
           @click.self="openForm(6)"
-          class="fixed top-0 left-0 z-50 backdrop:blur-xl w-screen h-screen bg-black/30 flex items-center justify-center"
+          class="fixed top-0 left-0 z-[100] backdrop:blur-xl w-screen h-screen bg-black/30 flex items-center justify-center"
         >
-          <Forms></Forms>
+          <Forms :title="'Получить прайс-лист'"></Forms>
         </div>
         <Collection
-          @click="openForm(7)"
+          @openForm="openForm(7)"
           :right="true"
           :img-path="'photo_2023-10-11 05.28.19.png'"
         ></Collection>
         <div
           :class="forms[7] ? 'block' : 'hidden'"
           @click.self="openForm(7)"
-          class="fixed top-0 left-0 z-50 backdrop:blur-xl w-screen h-screen bg-black/30 flex items-center justify-center"
+          class="fixed top-0 left-0 z-[100] backdrop:blur-xl w-screen h-screen bg-black/30 flex items-center justify-center"
         >
-          <Forms></Forms>
+          <Forms :title="'Получить прайс-лист'"></Forms>
         </div>
       </div>
     </section>
@@ -198,9 +198,9 @@
                   <div
                     :class="forms[cros.id] ? 'block' : 'hidden'"
                     @click.self="openForm(cros.id)"
-                    class="fixed top-0 left-0 z-50 backdrop:blur-xl text-sm w-screen h-screen bg-black/30 flex items-center justify-center"
+                    class="fixed top-0 left-0 z-[100] backdrop:blur-xl text-sm w-screen h-screen bg-black/30 flex items-center justify-center"
                   >
-                    <Forms></Forms>
+                    <Forms :title="'узнать о наличии:'" :img="cros.img[activeImg]"></Forms>
                   </div>
                   <p
                     class="text-wight transitionSetting group-hover/buybtn:text-black text-center text-[20px] md:text-[38px]"
@@ -351,7 +351,7 @@
           />
         </div>
         <div
-          class="lg:max-w-[840px] relative z-10 mx-auto sm:px-[5px] md:max-w-[608px] md:px-[20px] xl:max-w-[1236px]"
+          class="lg:max-w-[840px] relative mx-auto sm:px-[5px] md:max-w-[608px] md:px-[20px] xl:max-w-[1236px]"
         >
           <div
             class="transitionSetting relative flex flex-col md:flex-row w-full md:justify-end rounded-[20px] md:rounded-[31px] backdrop-blur-md"
@@ -510,9 +510,9 @@
                   <div
                     :class="forms[8] ? 'block' : 'hidden'"
                     @click.self="openForm(8)"
-                    class="fixed top-0 left-0 z-50 backdrop:blur-xl text-sm w-screen h-screen bg-black/30 flex items-center justify-center"
+                    class="fixed top-0 left-0 z-[100] backdrop:blur-xl text-sm w-screen h-screen bg-black/30 flex items-center justify-center"
                   >
-                    <Forms></Forms>
+                    <Forms :title="'узнать о наличии размера'"></Forms>
                   </div>
                 </div>
               </div>
@@ -582,7 +582,7 @@
             <div
               :class="forms[9] ? 'block' : 'hidden'"
               @click.self="openForm(9)"
-              class="fixed top-0 left-0 z-50 backdrop:blur-xl text-sm w-screen h-screen bg-black/30 flex items-center justify-center"
+              class="fixed top-0 left-0 z-[100] backdrop:blur-xl text-sm w-screen h-screen bg-black/30 flex items-center justify-center"
             >
               <Forms></Forms>
             </div>
