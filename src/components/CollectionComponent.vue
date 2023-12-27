@@ -38,7 +38,7 @@ function onIntersectionObserver([{ isIntersecting }]: any) {
       </div>
     </div>
     <div
-      class="inner_img absolute left-0 top-0 z-0 h-full w-full"
+      class="inner_img absolute left-0 top-0 z-0 h-full w-full rounded-[30px]"
       :style="{ backgroundImage: `url('../src/images/${imgPath}')` }"
     ></div>
   </div>
@@ -59,9 +59,7 @@ export default defineComponent({
     imgPath: String,
     linkPath: String,
     openForm: Number
-  },
-
-  setup() {}
+  }
 })
 </script>
 <style lang="scss">

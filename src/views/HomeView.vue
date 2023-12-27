@@ -1,8 +1,8 @@
 <template>
   <main>
-    <section class="section_1 mb-[87px]">
-      <div class="flex flex-col gap-[20px] overflow-hidden bg-black pt-[20px]">
-        <div class="flex flex-col md:flex-row justify-between gap-[20px] overflow-hidden">
+    <section class="section_1 pb-[87px] bg-black relative">
+      <div class="flex flex-col gap-[20px] overflow-hidden py-[20px]">
+        <div class="flex flex-col md:flex-row justify-between gap-[20px] overflow-hidden z-10">
           <Collection
             @openForm="openForm(4)"
             :left="true"
@@ -29,14 +29,14 @@
           </div>
         </div>
       </div>
-      <div class="w-screen">
-        <video autoplay loop muted ref="videoRef">
-          <source src="@/images/blackhole.mp4" type="video/mp4" />
-          black hole in spase
-        </video>
-      </div>
+      <video autoplay loop muted ref="videoRef" class="sticky top-[15px] bottom-[15px] -z-0">
+        <source src="@/images/blackhole.mp4" type="video/mp4" />
+        black hole in spase
+      </video>
 
-      <div class="flex flex-col md:flex-row justify-between gap-[20px] bg-black overflow-hidden">
+      <div
+        class="flex flex-col md:flex-row justify-between gap-[20px] overflow-hidden py-[20px] z-10"
+      >
         <Collection
           @openForm="openForm(6)"
           :left="true"
@@ -63,101 +63,105 @@
         </div>
       </div>
     </section>
-    <section
-      class="section_2 mx-auto mb-[150px] flex flex-col-reverse md:flex-row lg:flex-col lg:gap-[120px] xl:max-w-[1196px] justify-center"
-    >
-      <div
-        class="order-2 lg:order-1 flex flex-col md:flex-col-reverse lg:flex-row items-center lg:items-start justify-between"
+
+    <div class="flex justify-center w-full bg-wight relative z-10">
+      <section
+        class="section_2 mb-[150px] flex flex-col-reverse md:flex-row lg:flex-col lg:gap-[120px] xl:max-w-[1196px] justify-center bg-wight"
       >
-        <div class="w-full flex relative items-start md:items-center overflow-hidden">
-          <img
-            class="absolute block md:hidden top-[40%] left-[50%] max-w-[245px]"
-            style="box-shadow: 13px 14px 27px 0px rgba(0, 0, 0, 0.5)"
-            src="@/images/photo_2023-10.jpeg"
-            alt=""
-          />
-          <div class="max-w-[245px] lg:max-w-[312px] xl:max-w-[477px]">
-            <CardInfo :color="'7e5bef'">
+        <div
+          class="order-2 lg:order-1 flex flex-col md:flex-col-reverse lg:flex-row items-center lg:items-start justify-between"
+        >
+          <div class="w-full flex relative items-start md:items-center overflow-hidden">
+            <img
+              class="absolute block md:hidden top-[40%] left-[50%] max-w-[245px]"
+              style="box-shadow: 13px 14px 27px 0px rgba(0, 0, 0, 0.5)"
+              src="@/images/photo_2023-10.jpeg"
+              alt=""
+            />
+            <div class="max-w-[245px] lg:max-w-[312px] xl:max-w-[477px]">
+              <CardInfo :color="'7e5bef'">
+                <div
+                  class="main_text flex flex-col gap-[20px] p-[10px] lg:p-[25px] pt-[23px] lg:pt-[44px]"
+                >
+                  <p
+                    class="md:mb-[50px] lg:mb-[100px] md:text-[24px] lg:text-[32px] xl:text-[40px] font-bold"
+                  >
+                    ABOUT <br />
+                    US
+                  </p>
+                  <p class="text-center md:text-[20px] xl:text-[32px] font-semibold uppercase">
+                    taste&color
+                  </p>
+                  <p class="text-justify md:text-[15px] lg:text-[16px] xl:text-[20px] font-light">
+                    Бренд в котором каждый надет что-то для себя. Это не просто бренд одежды, это
+                    источник вдохновения и возможность выразить свой индивидуальный стиль в самых
+                    лучших аспектах моды и элегантности.
+                  </p>
+                </div>
+              </CardInfo>
+            </div>
+          </div>
+          <div class="md:max-w-[325px] lg:max-w-[414px] xl:max-w-[533px]">
+            <CardInfo :color="'B14F4F'">
               <div
                 class="main_text flex flex-col gap-[20px] p-[10px] lg:p-[25px] pt-[23px] lg:pt-[44px]"
               >
-                <p
-                  class="md:mb-[50px] lg:mb-[100px] md:text-[24px] lg:text-[32px] xl:text-[40px] font-bold"
-                >
-                  ABOUT <br />
-                  US
-                </p>
-                <p class="text-center md:text-[20px] xl:text-[32px] font-semibold uppercase">
-                  taste&color
+                <p class="text-start md:text-[20px] lg:text-[24px] xl:text-[32px] font-semibold">
+                  Требования для покупателей "taste&color":
                 </p>
                 <p class="text-justify md:text-[15px] lg:text-[16px] xl:text-[20px] font-light">
-                  Бренд в котором каждый надет что-то для себя. Это не просто бренд одежды, это
-                  источник вдохновения и возможность выразить свой индивидуальный стиль в самых
-                  лучших аспектах моды и элегантности.
+                  Обязанность №1 - Носить с удовольствием: В противном случае, разве это не
+                  занавеска в гостиной? <br />
+                  Не забыть почувствовать себя королевой/королем: Ведь кто еще, как не ты,
+                  заслуживает этого? <br />
+                  Избегать скучных моментов: Одежда "taste&color" предназначена для того, чтобы
+                  каждый день был мини-модным показом. <br />
+                  Сиять яркими красками даже в серых буднях: Главное - не поглотить офисный
+                  дресс-код своим шикарным стилем. <br />
+                  Превратить обычный день в феерию стиля: Помните, мир - это Ваш подиум, дорогие
+                  покупатели! <br />
+                  Не останавливаться на достигнутом: Ведь у нас каждая новая коллекция - как новая
+                  страница в истории твоего стиля!
                 </p>
               </div>
             </CardInfo>
           </div>
         </div>
-        <div class="md:max-w-[325px] lg:max-w-[414px] xl:max-w-[533px]">
-          <CardInfo :color="'B14F4F'">
-            <div
-              class="main_text flex flex-col gap-[20px] p-[10px] lg:p-[25px] pt-[23px] lg:pt-[44px]"
-            >
-              <p class="text-start md:text-[20px] lg:text-[24px] xl:text-[32px] font-semibold">
-                Требования для покупателей "taste&color":
-              </p>
-              <p class="text-justify md:text-[15px] lg:text-[16px] xl:text-[20px] font-light">
-                Обязанность №1 - Носить с удовольствием: В противном случае, разве это не занавеска
-                в гостиной? <br />
-                Не забыть почувствовать себя королевой/королем: Ведь кто еще, как не ты, заслуживает
-                этого? <br />
-                Избегать скучных моментов: Одежда "taste&color" предназначена для того, чтобы каждый
-                день был мини-модным показом. <br />
-                Сиять яркими красками даже в серых буднях: Главное - не поглотить офисный дресс-код
-                своим шикарным стилем. <br />
-                Превратить обычный день в феерию стиля: Помните, мир - это Ваш подиум, дорогие
-                покупатели! <br />
-                Не останавливаться на достигнутом: Ведь у нас каждая новая коллекция - как новая
-                страница в истории твоего стиля!
-              </p>
-            </div>
-          </CardInfo>
+        <div
+          class="order-1 lg:order-2 relative flex lg:w-full justify-end md:items-end lg:items-start lg:pr-[120px]"
+        >
+          <img
+            class="absolute hidden md:block md:top-0 md:left-0 md:max-w-[333px] lg:left-[5%] lg:-top-[40%] lg:max-w-[425px] xl:-left-[5%] xl:max-w-[609px]"
+            style="box-shadow: 13px 14px 27px 0px rgba(0, 0, 0, 0.5)"
+            src="@/images/photo_2023-10.jpeg"
+            alt=""
+          />
+          <div class="md:max-w-[327px] lg:max-w-[414px] xl:max-w-[545px]">
+            <CardInfo :color="'F3A352'">
+              <div
+                class="main_text flex flex-col gap-[20px] p-[10px] lg:p-[25px] pt-[23px] lg:pt-[44px]"
+              >
+                <p class="text-start md:text-[20px] lg:text-[24px] xl:text-[32px] font-semibold">
+                  Обязанности бренда одежды taste&color перед вами:
+                </p>
+                <p class="text-justify md:text-[15px] lg:text-[16px] xl:text-[20px] font-light">
+                  Поставлять высокое качество: "taste&color" обязан предоставлять потребителям
+                  одежду высочайшего качества, соответствующую премиальным стандартам. <br />
+                  Следить за последними тенденциями: Бренд должен быть в курсе последних модных
+                  течений, чтобы предлагать потребителям современные и стильные коллекции.
+                  <br />
+                  Обеспечивать комфорт: Каждая модель должна обеспечивать комфорт носки, чтобы
+                  потребители чувствовали себя уверенно в любой ситуации. <br />
+                  Поддерживать экологические стандарты: "taste&color" должен быть ответственным
+                  брендом, следящим за воздействием своей деятельности на окружающую среду.
+                </p>
+              </div>
+            </CardInfo>
+          </div>
         </div>
-      </div>
-      <div
-        class="order-1 lg:order-2 relative flex lg:w-full justify-end md:items-end lg:items-start lg:pr-[120px]"
-      >
-        <img
-          class="absolute hidden md:block md:top-0 md:left-0 md:max-w-[333px] lg:left-[5%] lg:-top-[40%] lg:max-w-[425px] xl:-left-[5%] xl:max-w-[609px]"
-          style="box-shadow: 13px 14px 27px 0px rgba(0, 0, 0, 0.5)"
-          src="@/images/photo_2023-10.jpeg"
-          alt=""
-        />
-        <div class="md:max-w-[327px] lg:max-w-[414px] xl:max-w-[545px]">
-          <CardInfo :color="'F3A352'">
-            <div
-              class="main_text flex flex-col gap-[20px] p-[10px] lg:p-[25px] pt-[23px] lg:pt-[44px]"
-            >
-              <p class="text-start md:text-[20px] lg:text-[24px] xl:text-[32px] font-semibold">
-                Обязанности бренда одежды taste&color перед вами:
-              </p>
-              <p class="text-justify md:text-[15px] lg:text-[16px] xl:text-[20px] font-light">
-                Поставлять высокое качество: "taste&color" обязан предоставлять потребителям одежду
-                высочайшего качества, соответствующую премиальным стандартам. <br />
-                Следить за последними тенденциями: Бренд должен быть в курсе последних модных
-                течений, чтобы предлагать потребителям современные и стильные коллекции.
-                <br />
-                Обеспечивать комфорт: Каждая модель должна обеспечивать комфорт носки, чтобы
-                потребители чувствовали себя уверенно в любой ситуации. <br />
-                Поддерживать экологические стандарты: "taste&color" должен быть ответственным
-                брендом, следящим за воздействием своей деятельности на окружающую среду.
-              </p>
-            </div>
-          </CardInfo>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
+
     <section
       class="section_3 relative mx-auto lg:max-w-[840px] z-10 sm:px-[5px] md:max-w-[608px] md:px-[20px] xl:max-w-[1236px]"
     >
@@ -316,19 +320,13 @@
                     {{ cros.height }}
                   </p>
                 </div>
-                <div class="flex h-full w-full items-end justify-end">
-                  <p
-                    class="transitionSetting buyNow rounded-[10px] md:rounded-[15px] text-[14px] md:text-[20px] m-[10px] p-[4px] group-hover/cross:bg-black group-hover/cross:text-wight"
-                  >
-                    buy now
-                  </p>
-                </div>
               </div>
             </div>
           </template>
         </div>
       </div>
     </section>
+
     <section class="section_4 xl:pb-[300px]">
       <div
         class="relative"
@@ -890,23 +888,23 @@ export default defineComponent({
 
     hoverRotate(rotate: Boolean) {
       rotate = !rotate
-    },
-
-    video(el: any) {
-      var scrollHeight = Math.max(
-        document.body.scrollHeight,
-        document.documentElement.scrollHeight,
-        document.body.offsetHeight,
-        document.documentElement.offsetHeight,
-        document.body.clientHeight,
-        document.documentElement.clientHeight
-      )
-      let vid: any
-      vid = this.$refs.videoRef
-      let pers = scrollY / (scrollHeight / 1.5 / 100)
-      vid.currentTime = (vid.duration / 100) * pers
-      vid.play()
     }
+
+    // video(el: any) {
+    //   var scrollHeight = Math.max(
+    //     document.body.scrollHeight,
+    //     document.documentElement.scrollHeight,
+    //     document.body.offsetHeight,
+    //     document.documentElement.offsetHeight,
+    //     document.body.clientHeight,
+    //     document.documentElement.clientHeight
+    //   )
+    //   let vid: any
+    //   vid = this.$refs.videoRef
+    //   let pers = scrollY / (scrollHeight / 1.5 / 100)
+    //   vid.currentTime = (vid.duration / 100) * pers
+    //   vid.play()
+    // }
   },
   mounted() {
     this.$nextTick(function () {

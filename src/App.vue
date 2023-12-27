@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header class="info_header h-[70vh]">
+  <header class="info_header h-[70vh] z-20 relative">
     <div class="header_wrapper">
       <div
         class="header_lay-link flex items-center justify-between mb-[24px] h-[21px] w-full px-3 bg-[#000]"
@@ -156,11 +156,16 @@ $maxWidth: 1440;
     color: #fff;
     font-family: Montserrat;
 
-    @include adaptiv_font_menu(32, 15);
+    @include adaptiv_font_menu(20, 15);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     letter-spacing: 3.2px;
+    transition: all 0.2s ease-in-out;
+    padding: 10px 15px;
+  }
+  *:hover {
+    color: rgb(244, 69, 69);
   }
 }
 
