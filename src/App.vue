@@ -35,7 +35,7 @@ import { RouterLink, RouterView } from 'vue-router'
         style="background-image: url('../src/images/Ломтик223.png')"
       >
         <div class="absolute w-full top-0 -translate-y-[100%]">
-          <img class="w-full" src="@/images/Ломтик233.png" alt="" />
+          <img class="w-full" src="@/assets/Ломтик233.png" alt="" />
         </div>
         <div
           class="lg:max-w-[840px] mx-auto sm:max-w-[320px] sm:px-[5px] md:max-w-[608px] md:px-[20px] xl:max-w-[1236px]"
@@ -51,7 +51,7 @@ import { RouterLink, RouterView } from 'vue-router'
           <div class="flex items-center justify-between px-[20px]">
             <div class="text-link_footer flex flex-col lg:flex-row gap-[60px]">
               <div class="flex items-center gap-[26px]">
-                <img class="w-[52px] h-[52px]" src="@/images/youtube.png" alt="" />
+                <img class="w-[52px] h-[52px]" src="@/assets/youtube.png" alt="" />
                 <div
                   class="transitionSetting bg-wight self-center text-black text-center flex items-center justify-center rounded-lg hover:bg-black hover:text-wight"
                 >
@@ -64,7 +64,7 @@ import { RouterLink, RouterView } from 'vue-router'
                 </div>
               </div>
               <div class="flex items-center gap-[26px]">
-                <img class="w-[52px] h-[52px]" src="@/images/telegram.png" alt="" />
+                <img class="w-[52px] h-[52px]" src="@/assets/telegram.png" alt="" />
                 <div
                   class="transitionSetting bg-wight self-center text-black text-center flex items-center justify-center rounded-lg hover:bg-black hover:text-wight"
                 >
@@ -77,7 +77,7 @@ import { RouterLink, RouterView } from 'vue-router'
                 </div>
               </div>
               <div class="flex items-center gap-[26px]">
-                <img class="w-[52px] h-[52px]" src="@/images/vk.png" alt="" />
+                <img class="w-[52px] h-[52px]" src="@/assets/vk.png" alt="" />
                 <div
                   class="transitionSetting bg-wight self-center text-black text-center flex items-center justify-center rounded-lg hover:bg-black hover:text-wight"
                 >
@@ -114,7 +114,7 @@ import { RouterLink, RouterView } from 'vue-router'
               class="flex flex-col items-start justify-between w-full uppercase px-[20px] text-wight"
             >
               <p>language: ru</p>
-              <img src="@/images/logo1.png" alt="" />
+              <img src="@/assets/logo1.png" alt="" />
             </div>
             <div class="flex flex-col uppercase">
               <p class="text-wight">Subscribe to our newslater</p>

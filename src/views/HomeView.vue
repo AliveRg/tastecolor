@@ -30,7 +30,7 @@
         </div>
       </div>
       <video autoplay loop muted ref="videoRef" class="sticky top-[15px] bottom-[15px] -z-0">
-        <source src="@/images/blackhole.mp4" type="video/mp4" />
+        <source src="@/assets/blackhole.mp4" type="video/mp4" />
         black hole in spase
       </video>
 
@@ -75,7 +75,7 @@
             <img
               class="absolute block md:hidden top-[40%] left-[50%] max-w-[245px]"
               style="box-shadow: 13px 14px 27px 0px rgba(0, 0, 0, 0.5)"
-              src="@/images/photo_2023-10.jpeg"
+              src="@/assets/photo_2023-10.jpeg"
               alt=""
             />
             <div class="max-w-[245px] lg:max-w-[312px] xl:max-w-[477px]">
@@ -133,7 +133,7 @@
           <img
             class="absolute hidden md:block md:top-0 md:left-0 md:max-w-[333px] lg:left-[5%] lg:-top-[40%] lg:max-w-[425px] xl:-left-[5%] xl:max-w-[609px]"
             style="box-shadow: 13px 14px 27px 0px rgba(0, 0, 0, 0.5)"
-            src="@/images/photo_2023-10.jpeg"
+            src="@/assets/photo_2023-10.jpeg"
             alt=""
           />
           <div class="md:max-w-[327px] lg:max-w-[414px] xl:max-w-[545px]">
@@ -219,7 +219,7 @@
                 <img
                   class="transitionSetting absolute -z-10 animate-[spin_2s_ease-in-out_forwards]"
                   :class="{ grayscale: grayscale }"
-                  src="@/images/vinil.png"
+                  src="@/assets/vinil.png"
                   alt=""
                 />
                 <img
