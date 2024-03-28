@@ -888,23 +888,23 @@ export default defineComponent({
 
     hoverRotate(rotate: Boolean) {
       rotate = !rotate
-    }
+    },
 
-    // video(el: any) {
-    //   var scrollHeight = Math.max(
-    //     document.body.scrollHeight,
-    //     document.documentElement.scrollHeight,
-    //     document.body.offsetHeight,
-    //     document.documentElement.offsetHeight,
-    //     document.body.clientHeight,
-    //     document.documentElement.clientHeight
-    //   )
-    //   let vid: any
-    //   vid = this.$refs.videoRef
-    //   let pers = scrollY / (scrollHeight / 1.5 / 100)
-    //   vid.currentTime = (vid.duration / 100) * pers
-    //   vid.play()
-    // }
+    video(el: any) {
+      var scrollHeight = Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.offsetHeight,
+        document.body.clientHeight,
+        document.documentElement.clientHeight
+      )
+      let vid: any
+      vid = this.$refs.videoRef
+      let pers = scrollY / (scrollHeight / 1.5 / 100)
+      vid.currentTime = (vid.duration / 100) * pers
+      vid.play()
+    }
   },
   mounted() {
     this.$nextTick(function () {

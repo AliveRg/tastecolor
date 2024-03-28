@@ -67,16 +67,16 @@ export default {
   },
   methods: {
     sendEmail() {
-      emailjs
-        .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this.$refs.form, 'YOUR_PUBLIC_KEY')
-        .then(
-          (result) => {
-            console.log('SUCCESS!', result.text)
-          },
-          (error) => {
-            console.log('FAILED...', error.text)
-          }
-        )
+      // emailjs
+      //   .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this.$refs.form, 'YOUR_PUBLIC_KEY')
+      //   .then(
+      //     (result) => {
+      //       console.log('SUCCESS!', result.text)
+      //     },
+      //     (error) => {
+      //       console.log('FAILED...', error.text)
+      //     }
+      //   )
     }
   }
 }
