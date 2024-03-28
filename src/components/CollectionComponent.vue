@@ -39,7 +39,7 @@ function onIntersectionObserver([{ isIntersecting }]: any) {
     </div>
     <div
       class="inner_img absolute left-0 top-0 z-0 h-full w-full rounded-[30px]"
-      :style="{ backgroundImage: `url('../src/images/${imgPath}')` }"
+      :style="{ backgroundImage: `url('/assets/${imgPath}')` }"
     ></div>
   </div>
 </template>

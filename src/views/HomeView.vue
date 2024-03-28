@@ -30,7 +30,7 @@
         </div>
       </div>
       <video autoplay loop muted ref="videoRef" class="sticky top-[15px] bottom-[15px] -z-0">
-        <source src="@/assets/blackhole.mp4" type="video/mp4" />
+        <source src="/assets/blackhole.mp4" type="video/mp4" />
         black hole in spase
       </video>
 
@@ -75,7 +75,7 @@
             <img
               class="absolute block md:hidden top-[40%] left-[50%] max-w-[245px]"
               style="box-shadow: 13px 14px 27px 0px rgba(0, 0, 0, 0.5)"
-              src="@/assets/photo_2023-10.jpeg"
+              src="/assets/photo_2023-10.jpeg"
               alt=""
             />
             <div class="max-w-[245px] lg:max-w-[312px] xl:max-w-[477px]">
@@ -133,7 +133,7 @@
           <img
             class="absolute hidden md:block md:top-0 md:left-0 md:max-w-[333px] lg:left-[5%] lg:-top-[40%] lg:max-w-[425px] xl:-left-[5%] xl:max-w-[609px]"
             style="box-shadow: 13px 14px 27px 0px rgba(0, 0, 0, 0.5)"
-            src="@/assets/photo_2023-10.jpeg"
+            src="/assets/photo_2023-10.jpeg"
             alt=""
           />
           <div class="md:max-w-[327px] lg:max-w-[414px] xl:max-w-[545px]">
@@ -219,7 +219,7 @@
                 <img
                   class="transitionSetting absolute -z-10 animate-[spin_2s_ease-in-out_forwards]"
                   :class="{ grayscale: grayscale }"
-                  src="@/assets/vinil.png"
+                  src="/assets/vinil.png"
                   alt=""
                 />
                 <img
@@ -228,7 +228,7 @@
                     'rotate-[20deg]': cros.rotate,
                     'rotate-[0deg]': !cros.rotate
                   }"
-                  :src="'../src/images/' + cros.img[activeImg]"
+                  :src="'/assets/' + cros.img[activeImg]"
                   alt=""
                 />
               </div>
@@ -300,7 +300,7 @@
                 :style="'  background-color: #' + cros.color"
               >
                 <img
-                  :src="'../src/images/' + cros.img['first']"
+                  :src="'/assets/' + cros.img['first']"
                   alt=""
                   class="top-1/5 absolute -translate-x-6 -rotate-[20deg] scale-[120%] md:scale-[140%]"
                 />
@@ -344,7 +344,7 @@
         >
           <img
             class="transitSetting w-full"
-            :src="activeSlide == 0 ? '../src/images/geers.png' : '../src/images/geers2.png '"
+            :src="activeSlide == 0 ? '/assets/geers.png' : '/assets/geers2.png '"
             alt=""
           />
         </div>
@@ -381,7 +381,7 @@
                 <div class="flex m-4 md:m-0 md:items-center justify-end h-full">
                   <img
                     class="w-[203px] md:w-[285px] lg:w-[400px] xl:w-[567px]"
-                    :src="'../src/images/' + slide"
+                    :src="'/assets/' + slide"
                     alt=""
                   />
                 </div>
@@ -539,7 +539,7 @@
                 class="flex items-start w-1/2 h-full"
                 :class="{ 'justify-start': index == 0, 'justify-end': index == 1 }"
               >
-                <img class="md:w-full lg:w-2/3" :src="'../src/images/' + slide" alt="" />
+                <img class="md:w-full lg:w-2/3" :src="'/assets/' + slide" alt="" />
               </div>
             </swiper-slide>
           </swiper>
@@ -987,7 +987,7 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 .backplace {
-  background-image: url('../src/images/vinil.webp');
+  background-image: url('/assets/vinil.webp');
   background-size: cover;
 }
 
